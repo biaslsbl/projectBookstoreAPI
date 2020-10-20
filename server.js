@@ -1,0 +1,37 @@
+const express = require('express')
+const bodyParser = require('body-parser')
+const rootRoute = require('./routes/rootRoute')
+const addStore = require('./routes/stores/addStore')
+const getStore = require('./routes/stores/getStore')
+const addInventory = require('./routes/inventory/addInventory')
+const getInventory = require('./routes/inventory/getInventory')
+const addBooks = require('./routes/Books/addBooks')
+const getBooks = require('./routes/Books/getBooks')
+const addTransactions = require('./routes/transactions/addTransactions')
+const getTransactions = require('./routes/transactions/getTransactions')
+const addUsers = require('./routes/users/addUsers')
+const getUsers = require('./routes/users/getUsers')
+const addCustomer = require('./routes/customer/addCustomer')
+const getCustomer = require('./routes/customer/getCustomer')
+
+const app = express()
+app.use(bodyParser.json())
+
+app.use(rootRoute)
+app.use(addStore)
+app.use(getStore)
+app.use(addInventory)
+app.use(getInventory)
+app.use(addBooks)
+app.use(getBooks)
+app.use(addTransactions)
+app.use(getTransactions)
+app.use(addUsers)
+app.use(getUsers)
+app.use(addCustomer)
+app.use(getCustomer)
+
+const port = 3000
+app.listen(port, () => {
+  console.log(`Backend app is running in http://localhost:${port}`);
+})
