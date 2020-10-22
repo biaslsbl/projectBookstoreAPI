@@ -6,6 +6,7 @@ const storesModel = require('../model/storesModel')
 const customerIdModel = require('../model/customerIdModel')
 const transactionsModel = require('../model/transactionsModel')
 const userIdModel = require('../model/usersIdModel')
+const transactionsNotesModel = require('../model/transactionsNotesModel')
 
 // ⚠️ propietary code, don't change it ⚠️
 // this code will create db.json automatically if your folder doesn't have one
